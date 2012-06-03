@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'MenubarTicker' target in the 'MenubarTicker' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

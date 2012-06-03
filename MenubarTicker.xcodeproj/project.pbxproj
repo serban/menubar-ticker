@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CC719E2157C1FD7008976AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC719E1157C1FD7008976AD /* Cocoa.framework */; };
+		4CC719EC157C1FD7008976AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC719EA157C1FD7008976AD /* InfoPlist.strings */; };
+		4CC719EE157C1FD7008976AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC719ED157C1FD7008976AD /* main.m */; };
+		4CC719F2157C1FD7008976AD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4CC719F0157C1FD7008976AD /* Credits.rtf */; };
+		4CC719F5157C1FD7008976AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC719F4157C1FD7008976AD /* AppDelegate.m */; };
+		4CC719F8157C1FD7008976AD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC719F6157C1FD7008976AD /* MainMenu.xib */; };
+		4CC71A00157C1FD7008976AD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC719FF157C1FD7008976AD /* SenTestingKit.framework */; };
+		4CC71A01157C1FD7008976AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC719E1157C1FD7008976AD /* Cocoa.framework */; };
+		4CC71A09157C1FD7008976AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC71A07157C1FD7008976AD /* InfoPlist.strings */; };
+		4CC71A0C157C1FD7008976AD /* MenubarTickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC71A0B157C1FD7008976AD /* MenubarTickerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CC71A02157C1FD7008976AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CC719D4157C1FD7008976AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CC719DC157C1FD7008976AD;
+			remoteInfo = MenubarTicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4CC719DD157C1FD7008976AD /* MenubarTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenubarTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC719E1157C1FD7008976AD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4CC719E4157C1FD7008976AD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4CC719E5157C1FD7008976AD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4CC719E6157C1FD7008976AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4CC719E9157C1FD7008976AD /* MenubarTicker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MenubarTicker-Info.plist"; sourceTree = "<group>"; };
+		4CC719EB157C1FD7008976AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4CC719ED157C1FD7008976AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4CC719EF157C1FD7008976AD /* MenubarTicker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MenubarTicker-Prefix.pch"; sourceTree = "<group>"; };
+		4CC719F1157C1FD7008976AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		4CC719F3157C1FD7008976AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4CC719F4157C1FD7008976AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4CC719F7157C1FD7008976AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4CC719FE157C1FD7008976AD /* MenubarTickerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenubarTickerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC719FF157C1FD7008976AD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4CC71A06157C1FD7008976AD /* MenubarTickerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MenubarTickerTests-Info.plist"; sourceTree = "<group>"; };
+		4CC71A08157C1FD7008976AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4CC71A0A157C1FD7008976AD /* MenubarTickerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenubarTickerTests.h; sourceTree = "<group>"; };
+		4CC71A0B157C1FD7008976AD /* MenubarTickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenubarTickerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CC719DA157C1FD7008976AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC719E2157C1FD7008976AD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC719FA157C1FD7008976AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC71A00157C1FD7008976AD /* SenTestingKit.framework in Frameworks */,
+				4CC71A01157C1FD7008976AD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CC719D2157C1FD7008976AD = {
+			isa = PBXGroup;
+			children = (
+				4CC719E7157C1FD7008976AD /* MenubarTicker */,
+				4CC71A04157C1FD7008976AD /* MenubarTickerTests */,
+				4CC719E0157C1FD7008976AD /* Frameworks */,
+				4CC719DE157C1FD7008976AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CC719DE157C1FD7008976AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CC719DD157C1FD7008976AD /* MenubarTicker.app */,
+				4CC719FE157C1FD7008976AD /* MenubarTickerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CC719E0157C1FD7008976AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CC719E1157C1FD7008976AD /* Cocoa.framework */,
+				4CC719FF157C1FD7008976AD /* SenTestingKit.framework */,
+				4CC719E3157C1FD7008976AD /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CC719E3157C1FD7008976AD /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CC719E4157C1FD7008976AD /* AppKit.framework */,
+				4CC719E5157C1FD7008976AD /* CoreData.framework */,
+				4CC719E6157C1FD7008976AD /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4CC719E7157C1FD7008976AD /* MenubarTicker */ = {
+			isa = PBXGroup;
+			children = (
+				4CC719F3157C1FD7008976AD /* AppDelegate.h */,
+				4CC719F4157C1FD7008976AD /* AppDelegate.m */,
+				4CC719F6157C1FD7008976AD /* MainMenu.xib */,
+				4CC719E8157C1FD7008976AD /* Supporting Files */,
+			);
+			path = MenubarTicker;
+			sourceTree = "<group>";
+		};
+		4CC719E8157C1FD7008976AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CC719E9157C1FD7008976AD /* MenubarTicker-Info.plist */,
+				4CC719EA157C1FD7008976AD /* InfoPlist.strings */,
+				4CC719ED157C1FD7008976AD /* main.m */,
+				4CC719EF157C1FD7008976AD /* MenubarTicker-Prefix.pch */,
+				4CC719F0157C1FD7008976AD /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4CC71A04157C1FD7008976AD /* MenubarTickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CC71A0A157C1FD7008976AD /* MenubarTickerTests.h */,
+				4CC71A0B157C1FD7008976AD /* MenubarTickerTests.m */,
+				4CC71A05157C1FD7008976AD /* Supporting Files */,
+			);
+			path = MenubarTickerTests;
+			sourceTree = "<group>";
+		};
+		4CC71A05157C1FD7008976AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CC71A06157C1FD7008976AD /* MenubarTickerTests-Info.plist */,
+				4CC71A07157C1FD7008976AD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CC719DC157C1FD7008976AD /* MenubarTicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CC71A0F157C1FD7008976AD /* Build configuration list for PBXNativeTarget "MenubarTicker" */;
+			buildPhases = (
+				4CC719D9157C1FD7008976AD /* Sources */,
+				4CC719DA157C1FD7008976AD /* Frameworks */,
+				4CC719DB157C1FD7008976AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MenubarTicker;
+			productName = MenubarTicker;
+			productReference = 4CC719DD157C1FD7008976AD /* MenubarTicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CC719FD157C1FD7008976AD /* MenubarTickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CC71A12157C1FD7008976AD /* Build configuration list for PBXNativeTarget "MenubarTickerTests" */;
+			buildPhases = (
+				4CC719F9157C1FD7008976AD /* Sources */,
+				4CC719FA157C1FD7008976AD /* Frameworks */,
+				4CC719FB157C1FD7008976AD /* Resources */,
+				4CC719FC157C1FD7008976AD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CC71A03157C1FD7008976AD /* PBXTargetDependency */,
+			);
+			name = MenubarTickerTests;
+			productName = MenubarTickerTests;
+			productReference = 4CC719FE157C1FD7008976AD /* MenubarTickerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CC719D4157C1FD7008976AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 4CC719D7157C1FD7008976AD /* Build configuration list for PBXProject "MenubarTicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4CC719D2157C1FD7008976AD;
+			productRefGroup = 4CC719DE157C1FD7008976AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CC719DC157C1FD7008976AD /* MenubarTicker */,
+				4CC719FD157C1FD7008976AD /* MenubarTickerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CC719DB157C1FD7008976AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC719EC157C1FD7008976AD /* InfoPlist.strings in Resources */,
+				4CC719F2157C1FD7008976AD /* Credits.rtf in Resources */,
+				4CC719F8157C1FD7008976AD /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC719FB157C1FD7008976AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC71A09157C1FD7008976AD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CC719FC157C1FD7008976AD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CC719D9157C1FD7008976AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC719EE157C1FD7008976AD /* main.m in Sources */,
+				4CC719F5157C1FD7008976AD /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC719F9157C1FD7008976AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC71A0C157C1FD7008976AD /* MenubarTickerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CC71A03157C1FD7008976AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CC719DC157C1FD7008976AD /* MenubarTicker */;
+			targetProxy = 4CC71A02157C1FD7008976AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4CC719EA157C1FD7008976AD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CC719EB157C1FD7008976AD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4CC719F0157C1FD7008976AD /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CC719F1157C1FD7008976AD /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4CC719F6157C1FD7008976AD /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CC719F7157C1FD7008976AD /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		4CC71A07157C1FD7008976AD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CC71A08157C1FD7008976AD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CC71A0D157C1FD7008976AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4CC71A0E157C1FD7008976AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4CC71A10157C1FD7008976AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MenubarTicker/MenubarTicker-Prefix.pch";
+				INFOPLIST_FILE = "MenubarTicker/MenubarTicker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4CC71A11157C1FD7008976AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MenubarTicker/MenubarTicker-Prefix.pch";
+				INFOPLIST_FILE = "MenubarTicker/MenubarTicker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4CC71A13157C1FD7008976AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MenubarTicker.app/Contents/MacOS/MenubarTicker";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MenubarTicker/MenubarTicker-Prefix.pch";
+				INFOPLIST_FILE = "MenubarTickerTests/MenubarTickerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4CC71A14157C1FD7008976AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MenubarTicker.app/Contents/MacOS/MenubarTicker";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MenubarTicker/MenubarTicker-Prefix.pch";
+				INFOPLIST_FILE = "MenubarTickerTests/MenubarTickerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CC719D7157C1FD7008976AD /* Build configuration list for PBXProject "MenubarTicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC71A0D157C1FD7008976AD /* Debug */,
+				4CC71A0E157C1FD7008976AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CC71A0F157C1FD7008976AD /* Build configuration list for PBXNativeTarget "MenubarTicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC71A10157C1FD7008976AD /* Debug */,
+				4CC71A11157C1FD7008976AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4CC71A12157C1FD7008976AD /* Build configuration list for PBXNativeTarget "MenubarTickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC71A13157C1FD7008976AD /* Debug */,
+				4CC71A14157C1FD7008976AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4CC719D4157C1FD7008976AD /* Project object */;
+}

@@ -1,0 +1,17 @@
+# Mac OS X
+.DS_Store
+
+# Vim
+.*.sw[a-z]
+
+# Emacs
+\#*#
+*~
+
+# Xcode 4
+build/
+xcuserdata/
+*.xcworkspace/
+
+# Other Hidden Files
+.*
