@@ -51,8 +51,9 @@ const NSTimeInterval kPollingInterval = 0.5;
 - (void)awakeFromNib
 {
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    [self.statusItem setMenu:self.statusMenu];
-    [self.statusItem setHighlightMode:YES];
+    self.statusItem.menu = self.statusMenu;
+    self.statusItem.highlightMode = YES;
+    self.statusItem.toolTip = @"Menu Bar Ticker";
 }
 
 - (void)updateTrackInfo:(NSTimer *)theTimer
@@ -72,7 +73,7 @@ const NSTimeInterval kPollingInterval = 0.5;
                          [currentTrack artist], [currentTrack name]];
     }
     
-    [statusItem setTitle:displayString];
+    statusItem.title = displayString;
 }
 
 @end
