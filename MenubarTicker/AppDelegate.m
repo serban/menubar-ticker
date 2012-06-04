@@ -17,6 +17,7 @@ const NSTimeInterval kPollingInterval = 0.5;
 @interface AppDelegate ()
 
 @property (nonatomic, retain) NSStatusItem *statusItem;
+@property (nonatomic, retain) NSTimer *timer;
 
 @end
 
@@ -25,21 +26,26 @@ const NSTimeInterval kPollingInterval = 0.5;
 
 @synthesize statusItem;
 @synthesize statusMenu;
+@synthesize timer;
 
 - (void)dealloc
 {
+    self.statusItem = nil;
     self.statusMenu = nil;
+    
+    [self.timer invalidate];
+    self.timer = nil;
     
     [super dealloc];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [NSTimer scheduledTimerWithTimeInterval:kPollingInterval
-                                     target:self
-                                   selector:@selector(updateTrackInfo:)
-                                   userInfo:nil
-                                    repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:kPollingInterval
+                                                  target:self
+                                                selector:@selector(updateTrackInfo:)
+                                                userInfo:nil
+                                                 repeats:YES];
 }
 
 - (void)awakeFromNib
