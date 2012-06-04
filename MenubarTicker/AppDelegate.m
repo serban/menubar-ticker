@@ -54,7 +54,7 @@ const NSTimeInterval kPollingInterval = 0.5;
     iTunesApplication *iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
     SpotifyApplication *spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
     
-    NSString *displayString = nil;
+    NSString *displayString = @"🎶"; // 🎵 or 🎶
     
     if ([iTunes isRunning] && [iTunes playerState] == iTunesEPlSPlaying) {
         iTunesTrack *currentTrack = [iTunes currentTrack];
