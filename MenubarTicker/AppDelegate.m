@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "iTunes.h"
+#import "Spotify.h"
 
 const NSTimeInterval kPollingInterval = 0.5;
 
@@ -51,11 +52,16 @@ const NSTimeInterval kPollingInterval = 0.5;
 - (void)updateTrackInfo:(NSTimer *)theTimer
 {
     iTunesApplication *iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
+    SpotifyApplication *spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
     
     NSString *displayString = nil;
     
     if ([iTunes isRunning] && [iTunes playerState] == iTunesEPlSPlaying) {
         iTunesTrack *currentTrack = [iTunes currentTrack];
+        displayString = [NSString stringWithFormat:@"%@ - %@",
+                         [currentTrack artist], [currentTrack name]];
+    } else if ([spotify isRunning] && [spotify playerState] == SpotifyEPlSPlaying) {
+        SpotifyTrack *currentTrack = [spotify currentTrack];
         displayString = [NSString stringWithFormat:@"%@ - %@",
                          [currentTrack artist], [currentTrack name]];
     }

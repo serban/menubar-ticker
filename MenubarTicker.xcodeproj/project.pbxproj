@@ -52,6 +52,7 @@
 		4CC71A0B157C1FD7008976AD /* MenubarTickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenubarTickerTests.m; sourceTree = "<group>"; };
 		4CC71A15157C2303008976AD /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
 		4CC71A16157C2A59008976AD /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		4CC71A18157C398E008976AD /* Spotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spotify.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,9 +120,10 @@
 		4CC719E7157C1FD7008976AD /* MenubarTicker */ = {
 			isa = PBXGroup;
 			children = (
-				4CC71A15157C2303008976AD /* iTunes.h */,
 				4CC719F3157C1FD7008976AD /* AppDelegate.h */,
 				4CC719F4157C1FD7008976AD /* AppDelegate.m */,
+				4CC71A15157C2303008976AD /* iTunes.h */,
+				4CC71A18157C398E008976AD /* Spotify.h */,
 				4CC719F6157C1FD7008976AD /* MainMenu.xib */,
 				4CC719E8157C1FD7008976AD /* Supporting Files */,
 			);
