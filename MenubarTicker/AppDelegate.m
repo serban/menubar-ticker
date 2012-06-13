@@ -11,7 +11,7 @@
 #import "iTunes.h"
 #import "Spotify.h"
 
-const NSTimeInterval kPollingInterval = 0.5;
+const NSTimeInterval kPollingInterval = 10.0;
 
 
 @interface AppDelegate ()
@@ -30,6 +30,8 @@ const NSTimeInterval kPollingInterval = 0.5;
 
 - (void)dealloc
 {
+    [[NSDistributedNotificationCenter defaultCenter] removeObserver:self name:nil object:nil];
+    
     self.statusItem = nil;
     self.statusMenu = nil;
     
@@ -43,9 +45,19 @@ const NSTimeInterval kPollingInterval = 0.5;
 {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:kPollingInterval
                                                   target:self
-                                                selector:@selector(updateTrackInfo:)
+                                                selector:@selector(timerDidFire:)
                                                 userInfo:nil
                                                  repeats:YES];
+    
+    [[NSDistributedNotificationCenter defaultCenter] addObserver:self
+                                                        selector:@selector(didReceivePlayerNotification:)
+                                                            name:@"com.apple.iTunes.playerInfo"
+                                                          object:nil];
+    
+    [[NSDistributedNotificationCenter defaultCenter] addObserver:self
+                                                        selector:@selector(didReceivePlayerNotification:)
+                                                            name:@"com.spotify.client.PlaybackStateChanged"
+                                                          object:nil];
 }
 
 - (void)awakeFromNib
@@ -54,9 +66,12 @@ const NSTimeInterval kPollingInterval = 0.5;
     self.statusItem.menu = self.statusMenu;
     self.statusItem.highlightMode = YES;
     self.statusItem.toolTip = @"Menu Bar Ticker";
+    
+    [self updateTrackInfo];
 }
 
-- (void)updateTrackInfo:(NSTimer *)theTimer
+
+- (void)updateTrackInfo
 {
     iTunesApplication *iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
     SpotifyApplication *spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
@@ -74,6 +89,16 @@ const NSTimeInterval kPollingInterval = 0.5;
     }
     
     statusItem.title = displayString;
+}
+
+- (void)timerDidFire:(NSTimer *)theTimer
+{
+    [self updateTrackInfo];
+}
+
+- (void)didReceivePlayerNotification:(NSNotification *)notification
+{
+    [self updateTrackInfo];
 }
 
 @end
