@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "iTunes.h"
+#import "Rdio.h"
 #import "Spotify.h"
 
 const NSTimeInterval kPollingInterval = 10.0;
@@ -56,6 +57,11 @@ const NSTimeInterval kPollingInterval = 10.0;
     
     [[NSDistributedNotificationCenter defaultCenter] addObserver:self
                                                         selector:@selector(didReceivePlayerNotification:)
+                                                            name:@"com.rdio.desktop.playStateChanged"
+                                                          object:nil];
+    
+    [[NSDistributedNotificationCenter defaultCenter] addObserver:self
+                                                        selector:@selector(didReceivePlayerNotification:)
                                                             name:@"com.spotify.client.PlaybackStateChanged"
                                                           object:nil];
 }
@@ -74,12 +80,17 @@ const NSTimeInterval kPollingInterval = 10.0;
 - (void)updateTrackInfo
 {
     iTunesApplication *iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
+    RdioApplication *rdio = [SBApplication applicationWithBundleIdentifier:@"com.rdio.desktop"];
     SpotifyApplication *spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
     
     NSString *displayString = @"🎶"; // 🎵 or 🎶
     
     if ([iTunes isRunning] && [iTunes playerState] == iTunesEPlSPlaying) {
         iTunesTrack *currentTrack = [iTunes currentTrack];
+        displayString = [NSString stringWithFormat:@"%@ - %@",
+                         [currentTrack artist], [currentTrack name]];
+    } else if ([rdio isRunning] && [rdio playerState] == RdioEPSSPlaying) {
+        RdioTrack *currentTrack = [rdio currentTrack];
         displayString = [NSString stringWithFormat:@"%@ - %@",
                          [currentTrack artist], [currentTrack name]];
     } else if ([spotify isRunning] && [spotify playerState] == SpotifyEPlSPlaying) {
