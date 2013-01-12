@@ -17,6 +17,10 @@ const NSTimeInterval kPollingInterval = 10.0;
 
 @interface AppDelegate ()
 
+@property (nonatomic, retain) iTunesApplication *iTunes;
+@property (nonatomic, retain) RdioApplication *rdio;
+@property (nonatomic, retain) SpotifyApplication *spotify;
+
 @property (nonatomic, retain) NSStatusItem *statusItem;
 @property (nonatomic, retain) NSTimer *timer;
 
@@ -25,6 +29,10 @@ const NSTimeInterval kPollingInterval = 10.0;
 
 @implementation AppDelegate
 
+@synthesize iTunes;
+@synthesize rdio;
+@synthesize spotify;
+
 @synthesize statusItem;
 @synthesize statusMenu;
 @synthesize timer;
@@ -32,6 +40,10 @@ const NSTimeInterval kPollingInterval = 10.0;
 - (void)dealloc
 {
     [[NSDistributedNotificationCenter defaultCenter] removeObserver:self name:nil object:nil];
+
+    self.iTunes = nil;
+    self.rdio = nil;
+    self.spotify = nil;
     
     self.statusItem = nil;
     self.statusMenu = nil;
@@ -68,6 +80,10 @@ const NSTimeInterval kPollingInterval = 10.0;
 
 - (void)awakeFromNib
 {
+    self.iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
+    self.rdio = [SBApplication applicationWithBundleIdentifier:@"com.rdio.desktop"];
+    self.spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
+    
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     self.statusItem.menu = self.statusMenu;
     self.statusItem.highlightMode = YES;
@@ -79,22 +95,18 @@ const NSTimeInterval kPollingInterval = 10.0;
 
 - (void)updateTrackInfo
 {
-    iTunesApplication *iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
-    RdioApplication *rdio = [SBApplication applicationWithBundleIdentifier:@"com.rdio.desktop"];
-    SpotifyApplication *spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
-    
     NSString *displayString = @"🎶"; // 🎵 or 🎶
     
-    if ([iTunes isRunning] && [iTunes playerState] == iTunesEPlSPlaying) {
-        iTunesTrack *currentTrack = [iTunes currentTrack];
+    if ([self.iTunes isRunning] && [self.iTunes playerState] == iTunesEPlSPlaying) {
+        iTunesTrack *currentTrack = [self.iTunes currentTrack];
         displayString = [NSString stringWithFormat:@"%@ - %@",
                          [currentTrack artist], [currentTrack name]];
-    } else if ([rdio isRunning] && [rdio playerState] == RdioEPSSPlaying) {
-        RdioTrack *currentTrack = [rdio currentTrack];
+    } else if ([self.rdio isRunning] && [self.rdio playerState] == RdioEPSSPlaying) {
+        RdioTrack *currentTrack = [self.rdio currentTrack];
         displayString = [NSString stringWithFormat:@"%@ - %@",
                          [currentTrack artist], [currentTrack name]];
-    } else if ([spotify isRunning] && [spotify playerState] == SpotifyEPlSPlaying) {
-        SpotifyTrack *currentTrack = [spotify currentTrack];
+    } else if ([self.spotify isRunning] && [self.spotify playerState] == SpotifyEPlSPlaying) {
+        SpotifyTrack *currentTrack = [self.spotify currentTrack];
         displayString = [NSString stringWithFormat:@"%@ - %@",
                          [currentTrack artist], [currentTrack name]];
     }
