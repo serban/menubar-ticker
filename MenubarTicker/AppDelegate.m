@@ -95,23 +95,18 @@ const NSTimeInterval kPollingInterval = 10.0;
 
 - (void)updateTrackInfo
 {
-    NSString *displayString = @"🎶"; // 🎵 or 🎶
+    id currentTrack = nil;
     
     if ([self.iTunes isRunning] && [self.iTunes playerState] == iTunesEPlSPlaying) {
-        iTunesTrack *currentTrack = [self.iTunes currentTrack];
-        displayString = [NSString stringWithFormat:@"%@ - %@",
-                         [currentTrack artist], [currentTrack name]];
+        currentTrack = [self.iTunes currentTrack];
     } else if ([self.rdio isRunning] && [self.rdio playerState] == RdioEPSSPlaying) {
-        RdioTrack *currentTrack = [self.rdio currentTrack];
-        displayString = [NSString stringWithFormat:@"%@ - %@",
-                         [currentTrack artist], [currentTrack name]];
+        currentTrack = [self.rdio currentTrack];
     } else if ([self.spotify isRunning] && [self.spotify playerState] == SpotifyEPlSPlaying) {
-        SpotifyTrack *currentTrack = [self.spotify currentTrack];
-        displayString = [NSString stringWithFormat:@"%@ - %@",
-                         [currentTrack artist], [currentTrack name]];
+        currentTrack = [self.spotify currentTrack];
     }
-    
-    statusItem.title = displayString;
+
+    statusItem.title = currentTrack ? [NSString stringWithFormat:@"%@ - %@", [currentTrack artist], [currentTrack name]]
+                                    : @"🎶"; // 🎵 or 🎶
 }
 
 - (void)timerDidFire:(NSTimer *)theTimer
