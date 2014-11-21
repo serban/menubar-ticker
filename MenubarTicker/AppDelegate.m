@@ -105,8 +105,8 @@ const NSTimeInterval kPollingInterval = 10.0;
         currentTrack = [self.spotify currentTrack];
     }
 
-    statusItem.title = currentTrack ? [NSString stringWithFormat:@"%@ - %@", [currentTrack artist], [currentTrack name]]
-                                    : @"🎶"; // 🎵 or 🎶
+    statusItem.title = currentTrack ? [NSString stringWithFormat:@"%@", [currentTrack name]]
+                                    : @"♫"; // 🎵 or 🎶 or ♫
 }
 
 - (void)timerDidFire:(NSTimer *)theTimer
