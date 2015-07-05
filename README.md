@@ -7,20 +7,9 @@ numbers follow the [Semantic Versioning] (http://semver.org) specification.
 ## About
 
 Menu Bar Ticker is a simple Mac OS X menu bar item that displays the current
-artist and song title playing from iTunes, Rdio, or Spotify.
+artist and song playing in iTunes, Rdio, or Spotify.
 
 There are no other fancy features.
-
-
-## Screenshots
-
-### Idle
-![Light - Idle](/screenshots/light-idle.png?raw=true)
-![Dark - Idle](/screenshots/dark-idle.png?raw=true)
-
-### Active
-![Light - Active](/screenshots/light-active.png?raw=true)
-![Dark - Active](/screenshots/dark-active.png?raw=true)
 
 
 ## Installation
@@ -32,3 +21,14 @@ and extract the `Menu Bar Ticker.app` file from the
 folder if you wish. Follow the instructions at
 http://support.apple.com/kb/PH18881 to start the app automatically when you log
 in.
+
+
+## Screenshots
+
+### Idle
+![Light - Idle](/screenshots/light-idle.png?raw=true)
+![Dark - Idle](/screenshots/dark-idle.png?raw=true)
+
+### Active
+![Light - Active](/screenshots/light-active.png?raw=true)
+![Dark - Active](/screenshots/dark-active.png?raw=true)
