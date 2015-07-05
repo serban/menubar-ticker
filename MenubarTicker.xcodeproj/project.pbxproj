@@ -13,7 +13,6 @@
 		4CC719F2157C1FD7008976AD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4CC719F0157C1FD7008976AD /* Credits.rtf */; };
 		4CC719F5157C1FD7008976AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC719F4157C1FD7008976AD /* AppDelegate.m */; };
 		4CC719F8157C1FD7008976AD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC719F6157C1FD7008976AD /* MainMenu.xib */; };
-		4CC71A00157C1FD7008976AD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC719FF157C1FD7008976AD /* SenTestingKit.framework */; };
 		4CC71A01157C1FD7008976AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC719E1157C1FD7008976AD /* Cocoa.framework */; };
 		4CC71A09157C1FD7008976AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC71A07157C1FD7008976AD /* InfoPlist.strings */; };
 		4CC71A0C157C1FD7008976AD /* MenubarTickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC71A0B157C1FD7008976AD /* MenubarTickerTests.m */; };
@@ -46,7 +45,6 @@
 		4CC719F4157C1FD7008976AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4CC719F7157C1FD7008976AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4CC719FE157C1FD7008976AD /* MenubarTickerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenubarTickerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CC719FF157C1FD7008976AD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4CC71A06157C1FD7008976AD /* MenubarTickerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MenubarTickerTests-Info.plist"; sourceTree = "<group>"; };
 		4CC71A08157C1FD7008976AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CC71A0A157C1FD7008976AD /* MenubarTickerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenubarTickerTests.h; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CC71A00157C1FD7008976AD /* SenTestingKit.framework in Frameworks */,
 				4CC71A01157C1FD7008976AD /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				4CC719E1157C1FD7008976AD /* Cocoa.framework */,
-				4CC719FF157C1FD7008976AD /* SenTestingKit.framework */,
 				4CC719E3157C1FD7008976AD /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -200,7 +196,7 @@
 			name = MenubarTickerTests;
 			productName = MenubarTickerTests;
 			productReference = 4CC719FE157C1FD7008976AD /* MenubarTickerTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -208,6 +204,7 @@
 		4CC719D4157C1FD7008976AD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0630;
 				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 4CC719D7157C1FD7008976AD /* Build configuration list for PBXProject "MenubarTicker" */;
@@ -400,13 +397,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MenubarTicker.app/Contents/MacOS/MenubarTicker";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MenubarTicker/MenubarTicker-Prefix.pch";
 				INFOPLIST_FILE = "MenubarTickerTests/MenubarTickerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -414,13 +410,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MenubarTicker.app/Contents/MacOS/MenubarTicker";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MenubarTicker/MenubarTicker-Prefix.pch";
 				INFOPLIST_FILE = "MenubarTickerTests/MenubarTickerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
