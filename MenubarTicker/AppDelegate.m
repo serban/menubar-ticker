@@ -106,7 +106,7 @@ const NSTimeInterval kPollingInterval = 10.0;
     }
 
     statusItem.title = currentTrack ? [NSString stringWithFormat:@"%@ - %@", [currentTrack artist], [currentTrack name]]
-                                    : @"🎶"; // 🎵 or 🎶
+                                    : @"♫"; // 🎵 or 🎶 or ♫
 }
 
 - (void)timerDidFire:(NSTimer *)theTimer
