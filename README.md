@@ -1,7 +1,7 @@
 # menubar-ticker - Show the current song
 
 This project lives at [GitHub](http://github.com/serban/menubar-ticker). Version
-numbers follow the [Semantic Versioning] (http://semver.org) specification.
+numbers follow the [Semantic Versioning](http://semver.org) specification.
 
 
 ## About
@@ -15,12 +15,11 @@ There are no other fancy features.
 ## Installation
 
 Download the
-[latest release](http://github.com/serban/menubar-ticker/releases/latest)
-and extract the `Menu Bar Ticker.app` file from the
-`menubar-ticker-vX.Y.Z.tar.bz2` file. You can move it into your `Applications`
-folder if you wish. Follow the instructions at
-http://support.apple.com/kb/PH18881 to start the app automatically when you log
-in.
+[latest release](http://github.com/serban/menubar-ticker/releases/latest) and
+extract the `Menu Bar Ticker.app` file from the `menubar-ticker-vX.Y.Z.tar.bz2`
+file. You can move it into your `Applications` folder if you wish. Follow
+[Apple's instructions](https://support.apple.com/kb/ph25590) to start the app
+automatically when you log in.
 
 
 ## Screenshots
