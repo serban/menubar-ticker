@@ -11,6 +11,14 @@ artist and song playing in iTunes, Rdio, or Spotify.
 
 There are no other fancy features.
 
+Verified to work with the following as of July 19, 2019:
+
+* macOS High Sierra (10.13.6)
+* macOS Mojave (10.14.5)
+* iTunes 12.8.2.3
+* iTunes 12.9.5.5
+* Spotify 1.1.10.540.gfcf0430f
+
 
 ## Installation
 
