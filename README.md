@@ -6,7 +6,7 @@ numbers follow the [Semantic Versioning](http://semver.org) specification.
 
 ## About
 
-Menu Bar Ticker is a simple Mac OS X menu bar item that displays the current
+Menu Bar Ticker is a simple macOS menu bar item that displays the current
 artist and song playing in iTunes, Rdio, or Spotify.
 
 There are no other fancy features.
