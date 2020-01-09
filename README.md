@@ -11,6 +11,9 @@ artist and song playing in iTunes, Rdio, or Spotify.
 
 There are no other fancy features.
 
+Does not support macOS Catalina as of January 9, 2020.
+Subscribe to [Issue #3](https://github.com/serban/menubar-ticker/issues/3) for updates.
+
 Verified to work with the following as of July 19, 2019:
 
 * macOS High Sierra (10.13.6)
