@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "iTunes.h"
+#import "Music.h"
 #import "Rdio.h"
 #import "Spotify.h"
 
@@ -18,6 +19,7 @@ const NSTimeInterval kPollingInterval = 10.0;
 @interface AppDelegate ()
 
 @property (nonatomic, retain) iTunesApplication *iTunes;
+@property (nonatomic, retain) MusicApplication *music;
 @property (nonatomic, retain) RdioApplication *rdio;
 @property (nonatomic, retain) SpotifyApplication *spotify;
 
@@ -30,6 +32,7 @@ const NSTimeInterval kPollingInterval = 10.0;
 @implementation AppDelegate
 
 @synthesize iTunes;
+@synthesize music;
 @synthesize rdio;
 @synthesize spotify;
 
@@ -42,6 +45,7 @@ const NSTimeInterval kPollingInterval = 10.0;
     [[NSDistributedNotificationCenter defaultCenter] removeObserver:self name:nil object:nil];
 
     self.iTunes = nil;
+    self.music = nil;
     self.rdio = nil;
     self.spotify = nil;
     
@@ -66,7 +70,12 @@ const NSTimeInterval kPollingInterval = 10.0;
                                                         selector:@selector(didReceivePlayerNotification:)
                                                             name:@"com.apple.iTunes.playerInfo"
                                                           object:nil];
-    
+
+    [[NSDistributedNotificationCenter defaultCenter] addObserver:self
+                                                        selector:@selector(didReceivePlayerNotification:)
+                                                            name:@"com.apple.music.playerInfo"
+                                                          object:nil];
+
     [[NSDistributedNotificationCenter defaultCenter] addObserver:self
                                                         selector:@selector(didReceivePlayerNotification:)
                                                             name:@"com.rdio.desktop.playStateChanged"
@@ -81,6 +90,7 @@ const NSTimeInterval kPollingInterval = 10.0;
 - (void)awakeFromNib
 {
     self.iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
+    self.music = [SBApplication applicationWithBundleIdentifier:@"com.apple.music"];
     self.rdio = [SBApplication applicationWithBundleIdentifier:@"com.rdio.desktop"];
     self.spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
     
@@ -99,6 +109,8 @@ const NSTimeInterval kPollingInterval = 10.0;
     
     if ([self.iTunes isRunning] && [self.iTunes playerState] == iTunesEPlSPlaying) {
         currentTrack = [self.iTunes currentTrack];
+    } else if ([self.music isRunning] && [self.music playerState] == MusicEPlSPlaying) {
+        currentTrack = [self.music currentTrack];
     } else if ([self.rdio isRunning] && [self.rdio playerState] == RdioEPSSPlaying) {
         currentTrack = [self.rdio currentTrack];
     } else if ([self.spotify isRunning] && [self.spotify playerState] == SpotifyEPlSPlaying) {
