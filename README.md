@@ -1,17 +1,18 @@
 # menubar-ticker - Show the current song
 
-This project lives at [GitHub](https://github.com/serban/menubar-ticker).
-Version numbers follow the [Semantic Versioning](https://semver.org)
-specification.
-
-
-## About
-
 Menu Bar Ticker is a simple macOS menu bar item that displays the current artist
 and song playing in iTunes (aka
 [Music](https://support.apple.com/en-us/HT210200)) or Spotify.
 
 There are no other fancy features.
+
+### Idle
+![Light - Idle](/screenshots/light-idle.png?raw=true)
+![Dark - Idle](/screenshots/dark-idle.png?raw=true)
+
+### Active
+![Light - Active](/screenshots/light-active.png?raw=true)
+![Dark - Active](/screenshots/dark-active.png?raw=true)
 
 
 ## Installation
@@ -24,18 +25,11 @@ file. You can move it into your `Applications` folder if you wish. Follow
 automatically when you log in.
 
 
-## Screenshots
-
-### Idle
-![Light - Idle](/screenshots/light-idle.png?raw=true)
-![Dark - Idle](/screenshots/dark-idle.png?raw=true)
-
-### Active
-![Light - Active](/screenshots/light-active.png?raw=true)
-![Dark - Active](/screenshots/dark-active.png?raw=true)
-
-
 ## Changelog
+
+This project lives at [GitHub](https://github.com/serban/menubar-ticker).
+Version numbers follow the [Semantic Versioning](https://semver.org)
+specification.
 
 ### v1.1.0
 
