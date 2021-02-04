@@ -96,8 +96,7 @@ const NSTimeInterval kPollingInterval = 10.0;
     
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     self.statusItem.menu = self.statusMenu;
-    self.statusItem.highlightMode = YES;
-    self.statusItem.toolTip = @"Menu Bar Ticker";
+    self.statusItem.button.toolTip = @"Menu Bar Ticker";
     
     [self updateTrackInfo];
 }
@@ -117,8 +116,9 @@ const NSTimeInterval kPollingInterval = 10.0;
         currentTrack = [self.spotify currentTrack];
     }
 
-    statusItem.title = currentTrack ? [NSString stringWithFormat:@"%@ - %@", [currentTrack artist], [currentTrack name]]
-                                    : @"♫"; // 🎵 or 🎶 or ♫
+    statusItem.button.title = currentTrack
+        ? [NSString stringWithFormat:@"%@ - %@", [currentTrack artist], [currentTrack name]]
+        : @"♫";
 }
 
 - (void)timerDidFire:(NSTimer *)theTimer
