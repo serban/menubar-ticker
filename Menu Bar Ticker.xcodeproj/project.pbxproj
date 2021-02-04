@@ -28,7 +28,6 @@
 		4CC719E9157C1FD7008976AD /* Menu Bar Ticker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Menu Bar Ticker-Info.plist"; sourceTree = "<group>"; };
 		4CC719EB157C1FD7008976AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CC719ED157C1FD7008976AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4CC719EF157C1FD7008976AD /* Menu Bar Ticker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Menu Bar Ticker-Prefix.pch"; sourceTree = "<group>"; };
 		4CC719F1157C1FD7008976AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		4CC719F3157C1FD7008976AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4CC719F4157C1FD7008976AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,7 +107,6 @@
 				4CC719E9157C1FD7008976AD /* Menu Bar Ticker-Info.plist */,
 				4CC719EA157C1FD7008976AD /* InfoPlist.strings */,
 				4CC719ED157C1FD7008976AD /* main.m */,
-				4CC719EF157C1FD7008976AD /* Menu Bar Ticker-Prefix.pch */,
 				4CC719F0157C1FD7008976AD /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -313,8 +311,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MenubarTicker/Menu Bar Ticker-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = "MenubarTicker/Menu Bar Ticker-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = org.serban.MenuBarTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -327,8 +324,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MenubarTicker/Menu Bar Ticker-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = "MenubarTicker/Menu Bar Ticker-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = org.serban.MenuBarTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
