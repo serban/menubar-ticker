@@ -1,11 +1,3 @@
-//
-//  AppDelegate.m
-//  MenubarTicker
-//
-//  Created by Serban Giuroiu on 6/3/12.
-//  Copyright (c) 2012 Serban Giuroiu. All rights reserved.
-//
-
 #import "AppDelegate.h"
 
 #import "iTunes.h"
