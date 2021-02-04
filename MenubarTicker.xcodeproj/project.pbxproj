@@ -145,10 +145,9 @@
 			};
 			buildConfigurationList = 4CC719D7157C1FD7008976AD /* Build configuration list for PBXProject "MenubarTicker" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 			);
 			mainGroup = 4CC719D2157C1FD7008976AD;
