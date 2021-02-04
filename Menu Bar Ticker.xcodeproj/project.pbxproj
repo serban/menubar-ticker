@@ -30,7 +30,6 @@
 		4CC719F1157C1FD7008976AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		4CC719F3157C1FD7008976AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4CC719F4157C1FD7008976AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4CC71A15157C2303008976AD /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
 		4CC71A16157C2A59008976AD /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		4CC71A18157C398E008976AD /* Spotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spotify.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +89,6 @@
 			children = (
 				4CC719F3157C1FD7008976AD /* AppDelegate.h */,
 				4CC719F4157C1FD7008976AD /* AppDelegate.m */,
-				4CC71A15157C2303008976AD /* iTunes.h */,
 				0005E3B923DE30AE002FC513 /* Music.h */,
 				4CC71A18157C398E008976AD /* Spotify.h */,
 				4CC719F6157C1FD7008976AD /* MainMenu.xib */,

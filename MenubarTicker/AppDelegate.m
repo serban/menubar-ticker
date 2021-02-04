@@ -1,6 +1,5 @@
 #import "AppDelegate.h"
 
-#import "iTunes.h"
 #import "Music.h"
 #import "Spotify.h"
 
@@ -9,7 +8,6 @@ const NSTimeInterval kPollingInterval = 10.0;
 
 @interface AppDelegate ()
 
-@property (nonatomic, retain) iTunesApplication *iTunes;
 @property (nonatomic, retain) MusicApplication *music;
 @property (nonatomic, retain) SpotifyApplication *spotify;
 
@@ -21,7 +19,6 @@ const NSTimeInterval kPollingInterval = 10.0;
 
 @implementation AppDelegate
 
-@synthesize iTunes;
 @synthesize music;
 @synthesize spotify;
 
@@ -33,7 +30,6 @@ const NSTimeInterval kPollingInterval = 10.0;
 {
     [[NSDistributedNotificationCenter defaultCenter] removeObserver:self name:nil object:nil];
 
-    self.iTunes = nil;
     self.music = nil;
     self.spotify = nil;
     
@@ -53,7 +49,9 @@ const NSTimeInterval kPollingInterval = 10.0;
                                                 selector:@selector(timerDidFire:)
                                                 userInfo:nil
                                                  repeats:YES];
-    
+
+    // As of February 2021, notifications from Music.app are still coming in through
+    // com.apple.iTunes.playerInfo and not com.apple.music.playerInfo.
     [[NSDistributedNotificationCenter defaultCenter] addObserver:self
                                                         selector:@selector(didReceivePlayerNotification:)
                                                             name:@"com.apple.iTunes.playerInfo"
@@ -72,7 +70,6 @@ const NSTimeInterval kPollingInterval = 10.0;
 
 - (void)awakeFromNib
 {
-    self.iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
     self.music = [SBApplication applicationWithBundleIdentifier:@"com.apple.music"];
     self.spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
     
@@ -88,9 +85,7 @@ const NSTimeInterval kPollingInterval = 10.0;
 {
     id currentTrack = nil;
     
-    if ([self.iTunes isRunning] && [self.iTunes playerState] == iTunesEPlSPlaying) {
-        currentTrack = [self.iTunes currentTrack];
-    } else if ([self.music isRunning] && [self.music playerState] == MusicEPlSPlaying) {
+    if ([self.music isRunning] && [self.music playerState] == MusicEPlSPlaying) {
         currentTrack = [self.music currentTrack];
     } else if ([self.spotify isRunning] && [self.spotify playerState] == SpotifyEPlSPlaying) {
         currentTrack = [self.spotify currentTrack];
