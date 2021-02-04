@@ -20,15 +20,15 @@
 		0005E3B923DE30AE002FC513 /* Music.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Music.h; sourceTree = "<group>"; };
 		4C51503225CB911200CCF4BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4C82949B1594FA3D003BF451 /* Rdio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rdio.h; sourceTree = "<group>"; };
-		4CC719DD157C1FD7008976AD /* MenubarTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenubarTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC719DD157C1FD7008976AD /* Menu Bar Ticker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu Bar Ticker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC719E1157C1FD7008976AD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4CC719E4157C1FD7008976AD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		4CC719E5157C1FD7008976AD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4CC719E6157C1FD7008976AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4CC719E9157C1FD7008976AD /* MenubarTicker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MenubarTicker-Info.plist"; sourceTree = "<group>"; };
+		4CC719E9157C1FD7008976AD /* Menu Bar Ticker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Menu Bar Ticker-Info.plist"; sourceTree = "<group>"; };
 		4CC719EB157C1FD7008976AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CC719ED157C1FD7008976AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4CC719EF157C1FD7008976AD /* MenubarTicker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MenubarTicker-Prefix.pch"; sourceTree = "<group>"; };
+		4CC719EF157C1FD7008976AD /* Menu Bar Ticker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Menu Bar Ticker-Prefix.pch"; sourceTree = "<group>"; };
 		4CC719F1157C1FD7008976AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		4CC719F3157C1FD7008976AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4CC719F4157C1FD7008976AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		4CC719DE157C1FD7008976AD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4CC719DD157C1FD7008976AD /* MenubarTicker.app */,
+				4CC719DD157C1FD7008976AD /* Menu Bar Ticker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,10 +105,10 @@
 		4CC719E8157C1FD7008976AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4CC719E9157C1FD7008976AD /* MenubarTicker-Info.plist */,
+				4CC719E9157C1FD7008976AD /* Menu Bar Ticker-Info.plist */,
 				4CC719EA157C1FD7008976AD /* InfoPlist.strings */,
 				4CC719ED157C1FD7008976AD /* main.m */,
-				4CC719EF157C1FD7008976AD /* MenubarTicker-Prefix.pch */,
+				4CC719EF157C1FD7008976AD /* Menu Bar Ticker-Prefix.pch */,
 				4CC719F0157C1FD7008976AD /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -117,9 +117,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4CC719DC157C1FD7008976AD /* MenubarTicker */ = {
+		4CC719DC157C1FD7008976AD /* Menu Bar Ticker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4CC71A0F157C1FD7008976AD /* Build configuration list for PBXNativeTarget "MenubarTicker" */;
+			buildConfigurationList = 4CC71A0F157C1FD7008976AD /* Build configuration list for PBXNativeTarget "Menu Bar Ticker" */;
 			buildPhases = (
 				4CC719D9157C1FD7008976AD /* Sources */,
 				4CC719DA157C1FD7008976AD /* Frameworks */,
@@ -129,9 +129,9 @@
 			);
 			dependencies = (
 			);
-			name = MenubarTicker;
+			name = "Menu Bar Ticker";
 			productName = MenubarTicker;
-			productReference = 4CC719DD157C1FD7008976AD /* MenubarTicker.app */;
+			productReference = 4CC719DD157C1FD7008976AD /* Menu Bar Ticker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -143,7 +143,7 @@
 				LastTestingUpgradeCheck = 0630;
 				LastUpgradeCheck = 1240;
 			};
-			buildConfigurationList = 4CC719D7157C1FD7008976AD /* Build configuration list for PBXProject "MenubarTicker" */;
+			buildConfigurationList = 4CC719D7157C1FD7008976AD /* Build configuration list for PBXProject "Menu Bar Ticker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -156,7 +156,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4CC719DC157C1FD7008976AD /* MenubarTicker */,
+				4CC719DC157C1FD7008976AD /* Menu Bar Ticker */,
 			);
 		};
 /* End PBXProject section */
@@ -314,8 +314,8 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MenubarTicker/MenubarTicker-Prefix.pch";
-				INFOPLIST_FILE = "MenubarTicker/MenubarTicker-Info.plist";
+				GCC_PREFIX_HEADER = "MenubarTicker/Menu Bar Ticker-Prefix.pch";
+				INFOPLIST_FILE = "MenubarTicker/Menu Bar Ticker-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.serban.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -328,8 +328,8 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MenubarTicker/MenubarTicker-Prefix.pch";
-				INFOPLIST_FILE = "MenubarTicker/MenubarTicker-Info.plist";
+				GCC_PREFIX_HEADER = "MenubarTicker/Menu Bar Ticker-Prefix.pch";
+				INFOPLIST_FILE = "MenubarTicker/Menu Bar Ticker-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.serban.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -339,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4CC719D7157C1FD7008976AD /* Build configuration list for PBXProject "MenubarTicker" */ = {
+		4CC719D7157C1FD7008976AD /* Build configuration list for PBXProject "Menu Bar Ticker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4CC71A0D157C1FD7008976AD /* Debug */,
@@ -348,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4CC71A0F157C1FD7008976AD /* Build configuration list for PBXNativeTarget "MenubarTicker" */ = {
+		4CC71A0F157C1FD7008976AD /* Build configuration list for PBXNativeTarget "Menu Bar Ticker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4CC71A10157C1FD7008976AD /* Debug */,
