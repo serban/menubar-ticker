@@ -316,7 +316,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MenubarTicker/Menu Bar Ticker-Prefix.pch";
 				INFOPLIST_FILE = "MenubarTicker/Menu Bar Ticker-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.serban.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = org.serban.MenuBarTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -330,7 +330,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MenubarTicker/Menu Bar Ticker-Prefix.pch";
 				INFOPLIST_FILE = "MenubarTicker/Menu Bar Ticker-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.serban.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = org.serban.MenuBarTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
